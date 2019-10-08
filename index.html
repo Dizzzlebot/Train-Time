@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train-Time</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- jQuery CDN -->
+
+    <!-- moment.js CDN -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+    <div class="jumbotron" jumbotron-dark"="">
+        <h1 class="display-4">
+            <center>Anytime is Train Time</center>
+        </h1>
+        <p class="lead">
+        </p>
+        <center>Choo Choo. Chee Chee</center>
+        <p></p>
+        <hr class="my-4">
+    </div>
+
+
+    <div class="container">
+
+        Current Train Schedule
+        <table class="table table-striped table-light" id="boardText">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Train Number</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival(HHMM)</th>
+                    <th scope="col">Minutes Away</th>
+
+                </tr>
+            </thead>
+            <!-- <tbody></tbody> -->
+        </table>
+        <i class="fa fa-list-alt"></i> Add Train
+    </div>
+    <div class="card-body">
+
+        <form>
+            <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="formControl" id="nameInput" placeholder="Enter a Train">
+            </div>
+
+            <div class="form-group">
+                <label for="trainNumber">Train Number</label>
+                <input type="number" class="formControl" id="numberInput" placeholder="Enter a Train ID Number">
+            </div>
+
+            <div class="form-group">
+                <label for="destForm">Destination</label>
+                <input type="text" class="formControl" id="destInput" placeholder="City, State">
+            </div>
+
+            <div class="form-group">
+                <label for="firstTrain">First Train Time (HHMM 24 Hour Format)</label>
+                <input type="number" class="formControl" id="timeInput" placeholder="eg. 1430"
+                    onkeyup="if(this.value > 2400){this.value=''; alert('Enter a valid time between 0000 and 2400');}">
+            </div>
+
+            <div class="form-group">
+                <label for="freqForm">Frequency (in mins.)</label>
+                <input type="number" class="formControl" id="freqInput" placeholder="eg. 30 minutes">
+
+        </form>
+        <button class="btn btn-primary submitInput">
+            Submit
+        </button>
+
+        <button class="btn btn-secondary resetInput">
+            Reset
+        </button>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript.js"></script>
+
+
+
+
+</body>
+
+
+
+</html>
